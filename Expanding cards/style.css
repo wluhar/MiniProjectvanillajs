@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    box-sizing: border-box;
+    /* whenever we make any changes in the styling of element the entire thing wont get affected */
+}
+
+body{
+    font-family:'Roboto', serif;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height:100vh;
+    /* this is to hide the scroll bars */
+    overflow: hidden;
+}
+h1{
+    margin:0;
+}
+.container{
+    display:flex;
+    width:90vw;
+}
+
+.panels{
+background-size: cover;
+background-repeat: no-repeat;
+background-position:center;
+border-radius: 10px;
+margin:5px;
+height:85vh;
+position:relative;
+/* this cursor will change how the cursor will look in */
+color:white;
+cursor:pointer;
+/* this flex will makes all the cards look the same size */
+flex:1;
+transition: flex 0.9s ease-in;
+}
+
+.panels h3{
+       position:absolute;
+    bottom:20px;
+    left:10px; 
+    opacity:0;
+}
+
+.panels.active{
+ flex:5;
+}
+
+.panels.active h3{
+    opacity:1;
+}
+
+@media(max-width:480px){
+    .container{
+        width : 100vw;
+        }
+
+        .panels:nth-of-type(4),.panels:nth-of-type(5){
+            display:none;
+        }
+
+}

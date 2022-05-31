@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family:'Ubuntu',sans-serif;
+    background:linear-gradient(90deg,lightblue,lightgreen);
+    display: flex;
+    flex-direction:column;
+    height:100vh;
+    align-items: center;
+    justify-content: center;
+    overflow:hidden;
+    
+}
+
+.btn{
+    background-color: rebeccapurple;
+    color:#fff;
+    margin:10px;
+    padding:20px;
+    border:0;
+    border-radius:5px;
+    font-family:inherit;
+    font-size:1rem;
+    cursor:pointer;
+}
+.btn:hover{
+    opacity:0.9;
+}
+
+.btn:focus{
+    outline:0;
+}
+

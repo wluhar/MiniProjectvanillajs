@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+
+/* define custom properties for reusing the same in the style */
+:root{
+    --line-border-fill:#3498db;
+    --line-border-empty:#e0e0e0;
+}
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    font-family: 'Muli', sans-serif;
+    background-color: #f6f7fb;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    height:100vh;
+    margin:0;
+}
+.container{
+    text-align: center;
+}
+
+.progress-container{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:20px;
+    max-width: 100%;
+    width:350px;
+    position:relative;
+}
+
+.progress{
+    background-color: var(--line-border-fill);
+    position:absolute;
+    top:50%;
+    left:0;
+    transform: translateY(-50%);
+    height:5px;
+    width:0%;  
+    z-index:-1;  
+    transition: 0.4s ease;
+}
+
+.progress-container::before{
+    content:'';
+    background-color:var(--line-border-empty);
+    height:5px;
+    width:100%;
+    top:50%;
+    z-index:-1;
+    transform:translateY(-50%);
+    position:absolute;
+}
+
+.circle{
+    background-color: #fff;
+    color:#999;
+    border-radius: 50%;
+    height:40px;
+    width:40px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border:4px solid var(--line-border-empty);
+    transition: 0.4s  ease;
+}
+
+.circle.active{
+    border-color:var(--line-border-fill);
+}
+
+.btn{
+    background-color: var(--line-border-fill);
+    color:#fff;
+    font-family: inherit;
+    border:0;
+    border-radius:6px;
+    padding:8px 30px;
+    margin:5px;
+    font-size: 14px;
+    cursor:pointer;
+}
+
+.btn:active{
+    /* this is to make the button somewhat reactive */
+    transform: scale(0.98);
+}
+
+.btn:focus{
+    outline:0;
+}
+
+.btn:disabled{
+    background-color:var(--line-border-empty);
+    cursor:not-allowed;
+}

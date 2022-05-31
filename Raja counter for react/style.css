@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;1,200&family=Water+Brush&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Mulish',serif;
+    background-color: grey;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height:100vh;
+    margin:0;
+    overflow: hidden;
+   
+}
+
+.container{
+    font-family:inherit;
+    background-color: whitesmoke;
+    padding:50px;
+    border-radius:10px;
+    opacity:0.99;
+}
+
+.counterdigit{
+    font-family: inherit;
+    display:flex;
+    justify-content: center;
+    margin-bottom:20px;
+    font-size:50px;
+    opacity:0.5;
+    
+}
+
+.counterbtn{
+    margin:10px 20px;
+    padding:20px;
+    background-color: bisque;
+    border:0;
+    font-family: inherit;
+    font-size: 19px;
+    font-weight: bold;
+    cursor:pointer;
+    border-radius: 10px;
+}
+
+.counterbtn:active{
+    transform:scale(0.98);
+
+}

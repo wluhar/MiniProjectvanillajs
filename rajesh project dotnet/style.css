@@ -1,0 +1,27 @@
+*{
+    box-sizing:border-box;
+}
+
+body{
+    display:flex;
+    flex-direction: column;
+    background-color:grey;
+    align-items:center;
+    justify-content: center;
+    height:100vh;
+    max-width: 90%;
+    max-height: 100%;
+
+}
+.container{
+    background-color: rgb(134, 161, 134);
+    padding: 50px;
+    font-size: 1rem;
+    color:whitesmoke;
+    margin-top:100px;
+ 
+}
+
+
+
+
